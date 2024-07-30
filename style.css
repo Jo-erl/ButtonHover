@@ -1,31 +1,52 @@
+/*FONTS*/
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular weight */
+}
+
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium weight */
+}
+
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-ExtraBold.ttf") format("truetype");
+  font-weight: 700; /* Extra weight */
+}
+/*=======================================================*/
+
 body {
+  font-family: "MTNBrighterSans", sans-serif !important;
   margin: 0;
   display: flex;
   justify-content: center;
   height: 100vh;
   align-items: center;
   background-color: aliceblue;
-  font-family: sans-serif;
 }
-
+/*=======================================================*/
 .btn {
   --xPos: 0;
   --yPos: 0;
-  background-color: rgb(17, 17, 17);
+  background-color: #111111;
   padding: 20px 40px;
   border-radius: 50px;
   box-shadow: 0 4px 8px #000000b7;
   text-decoration: none;
-  color: rgb(221, 221, 221);
+  color: #dddddd;
   position: relative;
   overflow: hidden;
 }
-
+/*=======================================================*/
 .btn span {
   position: relative;
   z-index: 1;
+  font-weight: 700;
 }
-
+/*=======================================================*/
 .btn::before {
   content: "";
   position: absolute;
@@ -38,11 +59,8 @@ body {
   border-radius: 50%;
   transition: width 0.6s, height 0.6s;
 }
-
+/*=======================================================*/
 .btn:hover::before {
   width: 300px;
   height: 300px;
 }
-
-
-
